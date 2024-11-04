@@ -1,0 +1,241 @@
+/* Reset default style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f254d0ea;
+    color: #ecf0f1;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+
+
+
+.banner {
+    text-align: center;
+    background-color: #f254d0ea;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.katalog {
+    padding: 20px;
+    text-align: center;
+}
+
+.katalog h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f254d0ea;
+}
+
+
+
+/* style.css */
+
+/* Gaya umum untuk tabel produk */
+/* Gaya umum untuk tabel produk */
+.produk-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.produk-table th, .produk-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #171516ea;
+    vertical-align: middle;
+}
+
+.produk-table th {
+    background-color: #f254d0ea;
+    color: #f7f5f7ea;
+    font-weight: bold;
+}
+
+/* Pengaturan gambar produk */
+.produk-table img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mengatur tombol agar berada di tengah */
+.produk-table .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Jarak antar tombol */
+}
+
+.produk-table button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.produk-table button:hover {
+    background-color: #45a049;
+}
+
+}
+
+.produk-table img {
+    width: 100px;  /* Ukuran gambar */
+    height: 100px; /* Ukuran gambar */
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px auto; /* Pusatkan gambar */
+    display: block; /* Pusatkan gambar */
+}
+
+.produk-table th {
+    background-color: #f254d0ea; /* Warna latar untuk header tabel */
+    color: #f7f5f7ea; /* Warna teks */
+    text-align: center; /* Ubah menjadi rata tengah */
+    padding: 10px; /* Jarak di dalam sel header */
+}
+
+.produk-table, .produk-table th, .produk-table td {
+    border: 1px solid #171516ea; /* Warna dan ketebalan garis */
+}
+
+.produk-table td {
+    padding: 10px;
+    text-align: center; /* Ubah menjadi rata tengah untuk sel data */
+}
+
+
+
+}
+
+}
+
+/* Gaya untuk gambar produk */
+.produk-table img {
+    width: 150px;       /* Ubah ukuran sesuai keinginan, misalnya 150px */
+    height: 150px;      /* Pastikan sama dengan lebar agar persegi */
+    object-fit: cover;  /* Mengatur gambar agar tidak terdistorsi */
+    border-radius: 8px; /* Opsional: Membuat sudut sedikit melengkung */
+    margin: 10px;       /* Menambahkan jarak di sekitar gambar */
+}
+
+/* Opsional: Menambahkan jarak di sekitar tabel produk */
+.produk-table td, .produk-table th {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Mengatur container detail produk */
+.detail-produk {
+    max-width: 600px;
+    margin: 0 auto; /* Memusatkan konten */
+    text-align: center;
+}
+
+/* Gaya gambar di halaman detail produk */
+.detail-produk img {
+    width: 200px;       /* Ukuran persegi lebih kecil */
+    height: 200px;
+    object-fit: cover;  /* Pastikan gambar tetap proporsional */
+    margin-bottom: 15px; /* Jarak di bawah gambar */
+    border-radius: 8px; /* Sedikit lengkungan */
+}
+
+/* style.css */
+
+.detail-produk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#product-details {
+    max-width: 600px;
+    text-align: center;
+}
+
+#product-image {
+    margin: 20px auto;
+    display: block;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#product-name {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+#product-price {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#product-description {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f254d0ea;
+    color: #ecf0f1;
+    font-size: 0.9rem;
+}

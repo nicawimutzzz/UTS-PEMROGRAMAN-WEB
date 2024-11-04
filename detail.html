@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Data produk
+        const products = {
+            "azzamine": {
+                "name": "Novel Azzamine",
+                "price": "Rp 75.000",
+                "image": "azzamine.jpg",
+                "description": "Novel menarik yang menceritakan tentang petualangan dan perjuangan tokoh utama."
+            },
+            "galaksi": {
+                "name": "Novel Galaksi",
+                "price": "Rp 95.000",
+                "image": "galaksi.jpg",
+                "description": "Sebuah kisah cinta yang indah dalam latar belakang yang unik dan berbeda."
+            },
+            "loneliness": {
+                "name": "Novel Loneliness",
+                "price": "Rp 75.000",
+                "image": "loneliness.jpg",
+                "description": "Kisah penuh makna tentang kesendirian dan perjalanan hidup seseorang."
+            },
+            "2,5780km": {
+                "name": "Novel 2,5780km",
+                "price": "Rp 88.000",
+                "image": "2,5780km.jpg",
+                "description": "Novel petualangan yang mengeksplorasi jarak dan waktu dalam konteks hubungan."
+            },
+            "kata": {
+                "name": "Novel Kata",
+                "price": "Rp 85.000",
+                "image": "kata.jpg",
+                "description": "Cerita mendalam tentang arti kata dan komunikasi dalam kehidupan."
+            },
+            "my youth": {
+                "name": "Novel My Youth",
+                "price": "Rp 85.000",
+                "image": "my youth.jpg",
+                "description": "Menggambarkan masa muda dengan segala kerumitannya."
+            },
+            "teluk alaska": {
+                "name": "Novel Teluk Alaska",
+                "price": "Rp 90.000",
+                "image": "teluk alaska.jpg",
+                "description": "Cerita tentang keindahan dan ketegangan di Teluk Alaska."
+            },
+            "terpikat": {
+                "name": "Novel Terpikat",
+                "price": "Rp 80.000",
+                "image": "terpikat.jpg",
+                "description": "Mengisahkan tentang ketertarikan dan konflik dalam kehidupan."
+            },
+            "70 mill": {
+                "name": "Novel 70 Mill",
+                "price": "Rp 89.000",
+                "image": "70 mill.jpg",
+                "description": "Petualangan seru dalam skala besar yang penuh ketegangan."
+            },
+            "hujan": {
+                "name": "Novel Hujan",
+                "price": "Rp 89.000",
+                "image": "hujan.jpg",
+                "description": "Kisah menyentuh tentang perjuangan di tengah badai kehidupan."
+            }
+        };
+
+        // Mendapatkan parameter URL untuk menentukan produk yang dipilih
+        function getProductDetail() {
+            const params = new URLSearchParams(window.location.search);
+            const productKey = params.get('product');
+            const product = products[productKey];
+
+            if (product) {
+                document.getElementById('product-name').textContent = product.name;
+                document.getElementById('product-price').textContent = product.price;
+                document.getElementById('product-description').textContent = product.description;
+                document.getElementById('product-image').src = product.image;
+            } else {
+                document.getElementById('product-details').innerHTML = "<p>Produk tidak ditemukan.</p>";
+            }
+        }
+    </script>
+</head>
+<body onload="getProductDetail()">
+    <header>
+        <div class="logo">Toko Buku Novel</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pemesanan.html">Pemesanan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="produk.html">Produk</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="detail-produk">
+        <h2>Detail Produk</h2>
+        <div id="product-details">
+            <img id="product-image" src="" alt="Gambar Produk" width="100">
+            <h3 id="product-name"></h3>
+            <p id="product-price"></p>
+            <p id="product-description"></p>
+            <button onclick="window.location.href='pemesanan.html'">Beli</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Alamat: Jl. Nanas No.123, Semarang</p>
+        <p>Email: info@tokobukunovel.com | Telp: 621234567890</p>
+    </footer>
+</body>
+</html>

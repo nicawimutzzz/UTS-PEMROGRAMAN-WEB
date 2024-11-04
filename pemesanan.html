@@ -1,0 +1,40 @@
+<?php
+$title = "Toko Buku Novel - Contact";
+include('header.php');
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Order Gula Aren</title>
+</head>
+<body>
+    <h1>Form Order Toko Buku Novel</h1>
+    <form action="proses_order.php" method="POST">
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="alamat">Alamat Pengiriman:</label><br>
+        <textarea id="alamat" name="alamat" required></textarea><br><br>
+
+        <label for="jumlah">Jumlah Pesanan:</label><br>
+        <input type="number" id="jumlah" name="jumlah" min="1" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telepon">Nomor Telepon:</label><br>
+        <input type="text" id="telepon" name="telepon" required><br><br>
+
+        <label for="pembayaran">Metode Pembayaran:</label><br>
+        <select>
+            <option>Transfer Bank</option>
+            <option>e-Wallet</option>
+            <option>BCA</option>
+            <option>dana</option>
+            <option>ovo</option>
+        </select><br><br>
+
+        <button type="submit">Kirim Order</button>
+    </form>
+</body>
+<?php include('footer.php'); ?>
